@@ -1,0 +1,20 @@
+extend layout
+block content
+  div
+    a(href="/new-user-form") Create new user
+  table
+    tr
+      th User ID
+      th Name
+      th Email
+      th Age
+    each user in users
+      tr
+        td= user.id
+        td= user.name
+        td= user.email
+        td= user.age
+        td
+          a(href=`/edit/${user.id}`) Edit
+        td
+          a(href=`/delete/${user.id}`) Delete
