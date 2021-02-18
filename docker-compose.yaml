@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  mywebsite:
+    image: docker-user-manager:latest
+    ports:
+      - 3000:8080
+    deploy: 
+      replicas: 3
+  myothersite:
+    image: docker-user-manager:latest
+    ports:
+      - 3001:8080
+    deploy: 
+      replicas: 2

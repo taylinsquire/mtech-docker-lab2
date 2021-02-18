@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 const fs = require('fs');
 const csv = require('csv-parser');
 const createCsvStringifier = require('csv-writer').createObjectCsvStringifier;
@@ -68,7 +69,7 @@ app.get('/delete/:id', (req, res) => {
   res.redirect('/');
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server is running');
 });
 
